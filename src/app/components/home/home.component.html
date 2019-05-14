@@ -1,0 +1,43 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li *ngFor="let item of items; let i = index" data-target="#myCarousel" [attr.data-slide-to]="i" class="{{item.stato}}"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+      <div *ngFor="let item of items" class="item {{item.stato}}">
+          <img src="{{item.src}}" alt="{{item.titolo}}" class="img-responsive imgCarousel">
+          <div class="carousel-caption">
+          </div>
+      </div> 
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+</div>
+
+<div class="bg-1">
+  <div class="container text-center">
+    <p>
+      "Ciò che non si può dire e ciò che non si può tacere, la musica lo esprime." <br/> [VICTOR HUGO]
+    </p>
+    <p>
+      "C'è musica classica talmente bella da diventare popolare e leggera, e c'è musica leggera talmente bella da diventare classica.
+      Quando la musica è bella è bella e basta." <br /> [ANDREA BOCELLI]
+    </p>
+    <p>
+      "Il bello della musica è che quando ti colpisce non senti dolore." <br /> [BOB MARLEY]
+    </p>
+    <p>
+      "Noi facciamo della musica libera, dura, che picchi forte sull'Anima in modo da aprirla." <br /> [JIMI HENDRIX]
+    </p>
+  </div>
+</div>

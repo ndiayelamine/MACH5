@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Mach5';
+  isAriaExpanded = false;
+
+  toggleisExpand() {
+    document.getElementById('myNavbar').setAttribute('aria-expanded', '' + this.isAriaExpanded);
+    document.getElementById('myNavbar').className = 'navbar-collapse collapse';
+  }
 }

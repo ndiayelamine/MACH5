@@ -1,0 +1,27 @@
+<!-- Container (Sezione Concerti) -->
+<div id="tour" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">DATE CONCERTI</h3>
+    <div class="row text-center" *ngIf="listaConcerti">
+      <div class="col-sm-4" *ngFor="let concerto of listaConcerti">
+        <div class="thumbnail">
+          <img src="{{concerto.foto_locale}}" alt="{{concerto.nome_locale}}" class="concerti img-responsive">
+          <p><strong>{{concerto.nome_locale}}</strong></p>
+          <p>Ore: {{concerto.ora}}</p>
+          <p>{{concerto.data | date:'fullDate'}}</p>
+          <p>{{concerto.indirizzo_locale}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center" *ngIf="!listaConcerti">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./assets/img/facciaTriste.jpg" alt="Nessun concerto disponibile" class="concerti img-responsive">
+          <p><strong>Nessun concerto disponibile</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
